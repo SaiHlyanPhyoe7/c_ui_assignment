@@ -1,0 +1,13 @@
+import DurianImage from "@/assets/image/fruits/Durian.svg";
+import Fruit1Image from "@/assets/image/fruits/Fruit-Layer-2015081200.svg";
+import Fruit2Image from "@/assets/image/fruits/Gerald-G-Simple-Fruit-FF-Menu-15.svg";
+import Fruit3Image from "@/assets/image/fruits/Gerald-G-Simple-Fruit-FF-Menu-16.svg";
+import Fruit4Image from "@/assets/image/fruits/Gerald-G-Simple-Fruit-FF-Menu-5.svg";
+import Fruit5Image from "@/assets/image/fruits/Gerald-G-Simple-Fruit-FF-Menu.svg";
+import KiwiImage from "@/assets/image/fruits/Kiwi-Fruit.svg";
+import CoconutImage from "@/assets/image/fruits/coconutTwo.svg";
+import StrawberryImage from "@/assets/image/fruits/johnny-automatic-strawberry.svg";
+import Kiwi1Image from "@/assets/image/fruits/kiwi-fruit (1).svg";
+import Coconut1Image from "@/assets/image/fruits/laobc_Coconut.svg";
+import PassionFruitImage from "@/assets/image/fruits/passion-fruit.svg";
+import PomegranateImage from "@/assets/image/fruits/pomegranate.svg";
