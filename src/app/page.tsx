@@ -13,10 +13,11 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setInitialLoading(false);
-    }, 100);
+    }, 2000);
   }, []);
+
   return (
-    <main className="">
+    <main className="bg-[url('../assets/image/normalImage/catBackgroun.jpg')]">
       {initialLoading ? (
         <div className="flex min-h-screen justify-center items-center">
           <Image src={initialLoadingImage} alt="Loading"></Image>
