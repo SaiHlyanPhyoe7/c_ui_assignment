@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import animatedLoadingMan from "@/assets/image/animatedImage/animatedLoadingMan.webp";
-import discordLogo from "@/assets/image/normalImage/discord.svg";
-import twitterLogo from "@/assets/image/normalImage/twitter.svg";
-import openseaLogo from "@/assets/image/normalImage/opensea.svg";
+
 import viewCollectionImage from "@/assets/image/normalImage/viewCollection.svg";
 import logoFluffyHugs from "@/assets/image/normalImage/logoImage.svg";
 import FruitsBackground from "./FruitsBackground";
-import catImage from "@/assets/image/normalImage/catImage.webp";
-import { motion } from "framer-motion";
+import CatImageElement from "./CatImageElement";
+import SocialMediaElements from "./SocialMediaElements";
 
 const Body = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -71,26 +69,13 @@ const Body = () => {
             alt=""
             style={{ ...rotateStyle, ...loadingManStyle }}
           />
+
+          {/* Fruits Image */}
           <FruitsBackground scrollPosition={scrollPosition} />
-          {/* {scrollPosition > 600 && scrollPosition < 1300 && ( */}
-          <div
-            className={`fixed top-3 lg:top-10 right-1 lg:right-10 duration-500 scale-0 ${
-              scrollPosition > 500 ? "scale-100" : ""
-            }`}
-          >
-            <motion.div
-              style={{ transformOrigin: "top" }}
-              animate={{ rotate: [30, -30, 30, -30] }}
-              transition={{ repeat: Infinity, duration: 5 }}
-            >
-              <Image
-                className="w-36 lg:w-48 transform origin-top duration-1000"
-                src={catImage}
-                alt="Cat Image"
-              />
-            </motion.div>
-          </div>
-          {/* )} */}
+
+          {/* Cat */}
+          <CatImageElement scrollPosition={scrollPosition} />
+
           <div style={fadeInParagraphStyle}>
             {scrollPosition > 1300 && (
               <p className="hover:scale-[1.005] duration-300 fixed top-[15%] left-[5%] lg:left-[55%] tracking-[1px] lg:tracking-[7px] leading-[40px] w-[90%] lg:w-[500px] cursor-pointer duration-2000">
@@ -105,26 +90,8 @@ const Body = () => {
           </div>
         </div>
 
-        {/* Fruits Image */}
-
         {/* Social Media Icon */}
-        <div className="fixed flex w-10 gap-5 left-10 bottom-8">
-          <Image
-            src={discordLogo}
-            className="hover:scale-[1.1] cursor-pointer hover:ring hover:ring-cyan-400 hover:ring-opacity-50 rounded-full duration-300"
-            alt="discordLogo"
-          />
-          <Image
-            src={openseaLogo}
-            className="hover:scale-[1.1] cursor-pointer hover:ring hover:ring-cyan-400 hover:ring-opacity-50 rounded-full duration-300"
-            alt="openseaLogo"
-          />
-          <Image
-            src={twitterLogo}
-            className="hover:scale-[1.1] cursor-pointer hover:ring hover:ring-cyan-400 hover:ring-opacity-50 rounded-full duration-300"
-            alt="twitterLogo"
-          />
-        </div>
+        <SocialMediaElements />
 
         <div className="fixed -right-3 lg:-right-3 -bottom-6 lg:-bottom-20 z-[222] cursor-pointer">
           <Image
@@ -136,6 +103,8 @@ const Body = () => {
         <div className="fixed lg:right-4 right-3 text-sm bottom-5 cursor-pointer tracking-[2px] lg:tracking-[6px] z-[333]">
           <p className="text-white text-[12px]">view collection</p>
         </div>
+
+        {/* Logo from second slide */}
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Image
             src={logoFluffyHugs}
